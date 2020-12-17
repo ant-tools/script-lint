@@ -1,0 +1,10 @@
+j(s)-script strict version
+
+- all instance fields are declared into constructor
+this way compiler can generate error if assign to not declared field, anywhere in class body
+
+- class fields are not initialized with results from new operator or static method invocation
+in order to avoid executing code in global scope
+
+- do not extend native or built-in object like
+$extends(comp.prj.Class, Object);
